@@ -11,6 +11,10 @@ Vue.use(VueRouter);
 
 const routes = [
   {
+    path: "*",
+    redirect: "/program/18"
+  },
+  {
     path: "/program",
     component: Program,
     children: [
