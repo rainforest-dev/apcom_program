@@ -1,4 +1,5 @@
 module.exports = {
+  publicPath: process.env.NODE_ENV === "production" ? "apcom_program" : "/",
   transpileDependencies: ["vuetify"],
   css: {
     loaderOptions: {
