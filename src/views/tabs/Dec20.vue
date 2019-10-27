@@ -12,7 +12,7 @@
         v-card.time(color="#e4e4e4")
           v-card-text.text-center 08:30-09:00
       v-col(cols="12" md="10" :class="{ 'pt-0': isMobile }")
-        v-card.speech
+        v-card.speech(tag="a" href="http://www.apcom2019.org/jiun-shyan-chen.html" target="_blank")
           v-card-title J.S. Chen
           v-card-subtitle Manifold Learning Based Data-Driven Modeling for Biological Tissues
     v-row
@@ -20,7 +20,7 @@
         v-card.time(color="#e4e4e4")
           v-card-text.text-center 09:00-09:50
       v-col(cols="12" md="10" :class="{ 'pt-0': isMobile }")
-        v-card.speech
+        v-card.speech(tag="a" href="http://www.apcom2019.org/yoon-young-kim.html" target="_blank")
           v-card-title Yoon Young Kim
           v-card-subtitle Advances in Beam-based Analysis Motivated by Efficient Design of Vehicle Body Structures
     v-row
@@ -28,7 +28,7 @@
         v-card.time(color="#e4e4e4")
           v-card-text.text-center 09:50-10:30
       v-col(cols="12" md="10" :class="{ 'pt-0': isMobile }")
-        v-card.speech
+        v-card.speech(tag="a" href="http://www.apcom2019.org/qing-li.html" target="_blank")
           v-card-title Qing Li
           v-card-subtitle Time-dependent Structural Optimization for Biomedical Problems
     v-row
@@ -58,11 +58,11 @@
       v-col(cols="12" md="10" :class="{ 'pt-0': isMobile }")
         v-row(:class="{ 'px-3': isMobile }")
           v-col(cols="12" sm="6" :class="{ 'pa-0': isMobile, 'py-0': !isMobile }")
-            v-card.speech
+            v-card.speech(tag="a" href="" target="_blank")
               v-card-title Jeng-Tzong Chen
               v-card-subtitle 
           v-col(cols="12" sm="6" :class="{ 'pa-0': isMobile, 'py-0': !isMobile }")
-            v-card.speech
+            v-card.speech(tag="a" href="" target="_blank")
               v-card-title Andrew Chan
               v-card-subtitle 
     v-row
@@ -72,11 +72,11 @@
       v-col(cols="12" md="10" :class="{ 'pt-0': isMobile }")
         v-row(:class="{ 'px-3': isMobile }")
           v-col(cols="12" sm="6" :class="{ 'pa-0': isMobile, 'py-0': !isMobile }")
-            v-card.speech
+            v-card.speech(tag="a" href="http://www.apcom2019.org/nasser-khalili.html" target="_blank")
               v-card-title Nasser Khalili
               v-card-subtitle A Fully Coupled Flow-Deformation Model for Dynamic Analysis of Unsaturated Soils Including Hydraulic and Mechanical Hystereses
           v-col(cols="12" sm="6" :class="{ 'pa-0': isMobile, 'py-0': !isMobile }")
-            v-card.speech
+            v-card.speech(tag="a" href="http://www.apcom2019.org/tae-hee-lee.html" target="_blank")
               v-card-title Tae Hee Lee
               v-card-subtitle Analysis and Optimization of a Piezoelectric Energy Harvester for Self-powered Wireless Sensor Systems
     v-row
@@ -114,14 +114,14 @@
           v-card-text.text-center Banquet
 </template>
 <script>
+import { mapState } from "vuex"
+
 import ParallelSession from "@/components/ParallelSession"
 
 export default {
   name: "dec_20",
-  props: {
-    parallel_sessions: Array
-  },
   computed: {
+    ...mapState({ parallel_sessions: state => state.parallel_sessions.slice(6, 9) }),
     isMobile: function() {
       return this.$vuetify.breakpoint.smAndDown
     }
