@@ -20,7 +20,7 @@ export default {
   name: "program",
   data() {
     return {
-      date: 0,
+      date: 1,
       dates: ["Dec 17", "Dec 18", "Dec 19", "Dec 20", ]
     }
   },
