@@ -2,24 +2,24 @@
   v-container
     v-row
       v-col(cols="12" md="2" :class="{ 'pb-0': isMobile }")
-        v-card.time(color="#e4e4e4")
+        v-card.time(:color="timeCardColor")
           v-card-text.text-center 08:00-08:30
       v-col(cols="12" md="10" :class="{ 'pt-0': isMobile }")
-        v-card.event(dark)
+        v-card.event(:dark="!dark" :light="dark")
           v-card-text.text-center Registration/Onsite
     v-row
       v-col(cols="12" md="2" :class="{ 'pb-0': isMobile }")
-        v-card.time(color="#e4e4e4")
+        v-card.time(:color="timeCardColor")
           v-card-text.text-center 08:30-09:00
       v-col(cols="12" md="10" :class="{ 'pt-0': isMobile }")
-        v-card.event.d-flex.flex-column(dark)
+        v-card.event.d-flex.flex-column(:dark="!dark" :light="dark")
           v-card-text.text-center Opening and Award Ceremony
           v-card-actions.align-self-end.mt-auto
             v-icon mdi-map
             v-col.caption 1F, 101
     v-row
       v-col(cols="12" md="2" :class="{ 'pb-0': isMobile }")
-        v-card.time(color="#e4e4e4")
+        v-card.time(:color="timeCardColor")
           v-card-text.text-center 09:00-09:50
       v-col(cols="12" md="10" :class="{ 'pt-0': isMobile }")
         v-card.speech.d-flex.flex-column(tag="a" href="http://www.apcom2019.org/herbert-mang.html" target="_blank")
@@ -30,7 +30,7 @@
                 v-col.caption 1F, 101
     v-row
       v-col(cols="12" md="2" :class="{ 'pb-0': isMobile }")
-        v-card.time(color="#e4e4e4")
+        v-card.time(:color="timeCardColor")
           v-card-text.text-center 09:50-10:30
       v-col(cols="12" md="10" :class="{ 'pt-0': isMobile }")
         v-card.speech.d-flex.flex-column(tag="a" href="http://www.apcom2019.org/wing-kam-liu.html" target="_blank")
@@ -41,30 +41,30 @@
                 v-col.caption 1F, 101
     v-row
       v-col(cols="12" md="2" :class="{ 'pb-0': isMobile }")
-        v-card.time(color="#e4e4e4")
+        v-card.time(:color="timeCardColor")
           v-card-text.text-center 10:30-10:50
       v-col(cols="12" md="10" :class="{ 'pt-0': isMobile }")
-        v-card.event(dark)
+        v-card.event(:dark="!dark" :light="dark")
           v-card-text.text-center Coffee Break
     v-row
       v-col(cols="12" md="2" :class="{ 'pb-0': isMobile }")
-        v-card.time(color="#e4e4e4")
+        v-card.time(:color="timeCardColor")
           v-card-text.text-center 10:50-12:20
       v-col(cols="12" md="10" :class="{ 'pt-0': isMobile }")
         ParallelSession(:mss="parallel_sessions[0]")
     v-row
       v-col(cols="12" md="2" :class="{ 'pb-0': isMobile }")
-        v-card.time(color="#e4e4e4")
+        v-card.time(:color="timeCardColor")
           v-card-text.text-center 12:20-13:20
       v-col(cols="12" md="10" :class="{ 'pt-0': isMobile }")
-        v-card.event.d-flex.flex-column(dark)
+        v-card.event.d-flex.flex-column(:dark="!dark" :light="dark")
           v-card-text.text-center Lunch
           v-card-actions.align-self-end.mt-auto
             v-icon mdi-map
             v-col.caption 3F, Banquet Hall
     v-row
       v-col(cols="12" md="2" :class="{ 'pb-0': isMobile }")
-        v-card.time(color="#e4e4e4")
+        v-card.time(:color="timeCardColor")
           v-card-text.text-center 13:20-14:00
       v-col(cols="12" md="10" :class="{ 'pt-0': isMobile }")
         v-row(:class="{ 'px-3': isMobile }")
@@ -91,7 +91,7 @@
                 v-col.caption 1F, 101C
     v-row
       v-col(cols="12" md="2" :class="{ 'pb-0': isMobile }")
-        v-card.time(color="#e4e4e4")
+        v-card.time(:color="timeCardColor")
           v-card-text.text-center 14:00-14:40
       v-col(cols="12" md="10" :class="{ 'pt-0': isMobile }")
         v-row(:class="{ 'px-3': isMobile }")
@@ -118,58 +118,70 @@
                 v-col.caption 1F, 101C
     v-row
       v-col(cols="12" md="2" :class="{ 'pb-0': isMobile }")
-        v-card.time(color="#e4e4e4")
+        v-card.time(:color="timeCardColor")
           v-card-text.text-center 14:40-15:00
       v-col(cols="12" md="10" :class="{ 'pt-0': isMobile }")
-        v-card.event(dark)
+        v-card.event(:dark="!dark" :light="dark")
           v-card-text.text-center Coffee Break
     v-row
       v-col(cols="12" md="2" :class="{ 'pb-0': isMobile }")
-        v-card.time(color="#e4e4e4")
+        v-card.time(:color="timeCardColor")
           v-card-text.text-center 15:00-16:30
       v-col(cols="12" md="10" :class="{ 'pt-0': isMobile }")
         ParallelSession(:mss="parallel_sessions[1]")
     v-row
       v-col(cols="12" md="2" :class="{ 'pb-0': isMobile }")
-        v-card.time(color="#e4e4e4")
+        v-card.time(:color="timeCardColor")
           v-card-text.text-center 16:30-16:40
       v-col(cols="12" md="10" :class="{ 'pt-0': isMobile }")
-        v-card.event(dark)
+        v-card.event(:dark="!dark" :light="dark")
           v-card-text.text-center Short Break
     v-row
       v-col(cols="12" md="2" :class="{ 'pb-0': isMobile }")
-        v-card.time(color="#e4e4e4")
+        v-card.time(:color="timeCardColor")
           v-card-text.text-center 16:40-18:10
       v-col(cols="12" md="10" :class="{ 'pt-0': isMobile }")
         ParallelSession(:mss="parallel_sessions[2]")
     v-row
       v-col(cols="12" md="2" :class="{ 'pb-0': isMobile }")
-        v-card.time(color="#e4e4e4")
+        v-card.time(:color="timeCardColor")
           v-card-text.text-center 18:10-21:00
       v-col(cols="12" md="10" :class="{ 'pt-0': isMobile }")
         v-card.event
           v-card-text.text-center 
 </template>
 <script>
-import { mapState } from "vuex"
+import { mapState } from "vuex";
 
-import ParallelSession from "@/components/ParallelSession"
+import ParallelSession from "@/components/ParallelSession";
 
 export default {
   name: "dec_18",
   computed: {
-    ...mapState({ parallel_sessions: state => state.parallel_sessions.slice(0, 3) }),
+    ...mapState({
+      parallel_sessions: state => state.parallel_sessions.slice(0, 3),
+      dark: state => state.dark
+    }),
     isMobile: function() {
-      return this.$vuetify.breakpoint.smAndDown
+      return this.$vuetify.breakpoint.smAndDown;
+    },
+    timeCardColor: function() {
+      if (this.$vuetify.theme.dark) {
+        return this.$vuetify.breakpoint.smAndDown ? "#616161" : "#424242";
+      } else {
+        return this.$vuetify.breakpoint.smAndDown ? "#E0E0E0" : "#FAFAFA";
+      }
     }
   },
   components: {
     ParallelSession
   }
-}
+};
 </script>
 <style lang="scss" scoped>
-.time, .event, .speech {
+.time,
+.event,
+.speech {
   @include size(100%);
 }
 </style>

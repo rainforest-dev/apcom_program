@@ -2,6 +2,7 @@ import Vue from "vue";
 import Vuex from "vuex";
 import Axios from "axios";
 import Papa from "papaparse";
+import vuetify from "@/plugins/vuetify";
 
 Vue.use(Vuex);
 
@@ -16,11 +17,16 @@ Array.prototype.groupBy = function(prop) {
 
 export default new Vuex.Store({
   state: {
-    parallel_sessions: []
+    parallel_sessions: [],
+    dark: false
   },
   mutations: {
     setParallelSessions(state, parallel_sessions) {
       state.parallel_sessions = parallel_sessions;
+    },
+    setDark(state, value) {
+      state.dark = value;
+      vuetify.framework.theme.dark = state.dark;
     }
   },
   actions: {
@@ -33,6 +39,9 @@ export default new Vuex.Store({
         );
         commit("setParallelSessions", parallel_sessions);
       });
+    },
+    toggleDarkMode({ state, commit }) {
+      commit("setDark", !state.dark);
     }
   },
   modules: {}
