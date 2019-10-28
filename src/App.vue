@@ -16,7 +16,7 @@ import { mapActions } from 'vuex'
 export default {
   name: "App",
   data: () => ({
-    parallel_sessions_url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vT85LWZ9Cx9hM9XYyL_j1ncLr0scmbqaIakLTcecn8HF9Kad1mCpF_3jqo7iwl4dmejLACm9lArugcm/pub?gid=328538989&single=true&output=csv"
+    parallel_sessions_url: "hhttps://docs.google.com/spreadsheets/d/e/2PACX-1vT85LWZ9Cx9hM9XYyL_j1ncLr0scmbqaIakLTcecn8HF9Kad1mCpF_3jqo7iwl4dmejLACm9lArugcm/pub?gid=328538989&single=true&output=csv"
   }),
   mounted() {
     this.loadParallelSessions(this.parallel_sessions_url)
