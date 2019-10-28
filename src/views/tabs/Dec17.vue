@@ -75,11 +75,7 @@
         v-card.time(:color="timeCardColor")
           v-card-text.text-center 15:00-16:30
       v-col(cols="12" md="10" :class="{ 'pt-0': isMobile }")
-        v-card.event.d-flex.flex-column(:dark="!dark" :light="dark")
-          v-card-text.text-center APACM EC meeting
-          v-card-actions.align-self-end.mt-auto
-            v-icon mdi-map
-            v-col.caption 4F, Elegance Lounge
+        EventCard(title="APACM EC meeting" location="4F, Elegance Lounge")
     v-row
       v-col(cols="12" md="2" :class="{ 'pb-0': isMobile }")
         v-card.time(:color="timeCardColor")
@@ -99,15 +95,15 @@
         v-card.time(:color="timeCardColor")
           v-card-text.text-center 18:00-20:00
       v-col(cols="12" md="10" :class="{ 'pt-0': isMobile }")
-        v-card.event.d-flex.flex-column(:dark="!dark" :light="dark")
-          v-card-text.text-center Welcome Reception
-          v-card-text.text-center.warning--text.text--darken.pa-0 Registration(17:30-18:30)
-          v-card-actions.align-self-end.mt-auto
-            v-icon mdi-map
-            v-col.caption 4F, V.I.P. Room, TICC
+        EventCard(
+          title="Welcome Reception</br><span class='warning--text text--darken-2'>Registration(17:30-18:30)</span>" 
+          location="4F, V.I.P. Room, TICC"
+        )
 </template>
 <script>
 import { mapState } from "vuex";
+
+import EventCard from "@/components/EventCard";
 
 export default {
   name: "dec_17",
@@ -123,6 +119,9 @@ export default {
         return this.$vuetify.breakpoint.smAndDown ? "#E0E0E0" : "#FAFAFA";
       }
     }
+  },
+  components: {
+    EventCard,
   }
 };
 </script>

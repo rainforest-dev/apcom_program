@@ -5,48 +5,46 @@
         v-card.time(:color="timeCardColor")
           v-card-text.text-center 08:00-08:30
       v-col(cols="12" md="10" :class="{ 'pt-0': isMobile }")
-        v-card.event(:dark="!dark" :light="dark")
-          v-card-text.text-center Registration/Onsite
+        EventCard(title="Registration/Onsite")
     v-row
       v-col(cols="12" md="2" :class="{ 'pb-0': isMobile }")
         v-card.time(:color="timeCardColor")
           v-card-text.text-center 08:30-09:00
       v-col(cols="12" md="10" :class="{ 'pt-0': isMobile }")
-        v-card.speech.d-flex.flex-column(tag="a" href="http://www.apcom2019.org/tayfun-tezduyar.html" target="_blank")
-          v-card-title David J. Srolovitz
-          v-card-subtitle On the Mechanics of 2D Alloy Sheets : Application to Transition Metal Dichalcogenides
-          v-card-actions.align-self-end.mt-auto
-                v-icon mdi-map
-                v-col.caption 1F, 101
+        SpeechCard(
+          title=" On the Mechanics of 2D Alloy Sheets : Application to Transition Metal Dichalcogenides"
+          speaker="David J. Srolovitz"
+          location="1F, 101"
+          url="http://www.apcom2019.org/tayfun-tezduyar.html"
+        )
     v-row
       v-col(cols="12" md="2" :class="{ 'pb-0': isMobile }")
         v-card.time(:color="timeCardColor")
           v-card-text.text-center 09:00-09:50
       v-col(cols="12" md="10" :class="{ 'pt-0': isMobile }")
-        v-card.speech.d-flex.flex-column(tag="a" href="http://www.apcom2019.org/tayfun-tezduyar.html" target="_blank")
-          v-card-title Tayfun Tezduyar
-          v-card-subtitle Space-Time Computational Analysis: From Inception to New Generations
-          v-card-actions.align-self-end.mt-auto
-                v-icon mdi-map
-                v-col.caption 1F, 101
+        SpeechCard(
+          title=" Space-Time Computational Analysis: From Inception to New Generations"
+          speaker="Tayfun Tezduyar"
+          location="1F, 101"
+          url="http://www.apcom2019.org/tayfun-tezduyar.html"
+        )
     v-row
       v-col(cols="12" md="2" :class="{ 'pb-0': isMobile }")
         v-card.time(:color="timeCardColor")
           v-card-text.text-center 09:50-10:30
       v-col(cols="12" md="10" :class="{ 'pt-0': isMobile }")
-        v-card.speech.d-flex.flex-column(tag="a" href="#" target="_blank")
-          v-card-title Hiroshi Okuda
-          v-card-subtitle 
-          v-card-actions.align-self-end.mt-auto
-                v-icon mdi-map
-                v-col.caption 1F, 101
+        SpeechCard(
+          title=" "
+          speaker="Hiroshi Okuda"
+          location="1F, 101"
+          url="#"
+        )
     v-row
       v-col(cols="12" md="2" :class="{ 'pb-0': isMobile }")
         v-card.time(:color="timeCardColor")
           v-card-text.text-center 10:30-10:50
       v-col(cols="12" md="10" :class="{ 'pt-0': isMobile }")
-        v-card.event(:dark="!dark" :light="dark")
-          v-card-text.text-center Coffee Break
+        EventCard(title="Coffee Break")
     v-row
       v-col(cols="12" md="2" :class="{ 'pb-0': isMobile }")
         v-card.time(:color="timeCardColor")
@@ -58,17 +56,9 @@
         v-card.time(:color="timeCardColor")
           v-card-text.text-center 12:20-13:20
       v-col(cols="12" md="5" :class="{ 'py-0': isMobile }")
-        v-card.event.d-flex.flex-column(:dark="!dark" :light="dark")
-          v-card-text.text-center Lunch
-          v-card-actions.align-self-end.mt-auto
-            v-icon mdi-map
-            v-col.caption 3F, Banquet Hall
+        EventCard(title="Lunch" location="3F, Banquet Hall")
       v-col(cols="12" md="5" :class="{ 'py-0': isMobile }")
-        v-card.event.d-flex.flex-column(:dark="!dark" :light="dark")
-          v-card-text.text-center JACM Meeting
-          v-card-actions.align-self-end.mt-auto
-            v-icon mdi-map
-            v-col.caption 3F, North Lounge
+        EventCard(title="JACM Meeting" location="3F, North Lounge")
     v-row
       v-col(cols="12" md="2" :class="{ 'pb-0': isMobile }")
         v-card.time(:color="timeCardColor")
@@ -76,26 +66,26 @@
       v-col(cols="12" md="10" :class="{ 'pt-0': isMobile }")
         v-row(:class="{ 'px-3': isMobile }")
           v-col(cols="12" sm="4" :class="{ 'pa-0': isMobile, 'py-0': !isMobile }")
-            v-card.speech.d-flex.flex-column(tag="a" href="" target="_blank")
-              v-card-title Wolfgang Wall
-              v-card-subtitle 
-              v-card-actions.align-self-end.mt-auto
-                v-icon mdi-map
-                v-col.caption 1F, 102
+            SpeechCard(
+              title=" "
+              speaker="Wolfgang Wall"
+              location="1F, 102"
+              url="#"
+            )
           v-col(cols="12" sm="4" :class="{ 'pa-0': isMobile, 'py-0': !isMobile }")
-            v-card.speech.d-flex.flex-column(tag="a" href="http://www.apcom2019.org/maenghyo-cho.html" target="_blank")
-              v-card-title Maenghyo Cho
-              v-card-subtitle Design and Analysis of Photo-responsive polymers: scale bridging between CG MD and shell FE
-              v-card-actions.align-self-end.mt-auto
-                v-icon mdi-map
-                v-col.caption 1F, 101B
+            SpeechCard(
+              title=" Design and Analysis of Photo-responsive polymers: scale bridging between CG MD and shell FE"
+              speaker="Maenghyo Cho"
+              location="1F, 101B"
+              url="http://www.apcom2019.org/maenghyo-cho.html"
+            )
           v-col(cols="12" sm="4" :class="{ 'pa-0': isMobile, 'py-0': !isMobile }")
-            v-card.speech.d-flex.flex-column(tag="a" href="http://www.apcom2019.org/sandra-shefelbine.html" target="_blank")
-              v-card-title Sandra Shefelbine
-              v-card-subtitle Modeling Musculoskeletal Mechanobiology
-              v-card-actions.align-self-end.mt-auto
-                v-icon mdi-map
-                v-col.caption 1F, 101C
+            SpeechCard(
+              title=" Modeling Musculoskeletal Mechanobiology"
+              speaker="Sandra Shefelbine"
+              location="1F, 101C"
+              url="http://www.apcom2019.org/sandra-shefelbine.html"
+            )
     v-row
       v-col(cols="12" md="2" :class="{ 'pb-0': isMobile }")
         v-card.time(:color="timeCardColor")
@@ -103,33 +93,32 @@
       v-col(cols="12" md="10" :class="{ 'pt-0': isMobile }")
         v-row(:class="{ 'px-3': isMobile }")
           v-col(cols="12" sm="4" :class="{ 'pa-0': isMobile, 'py-0': !isMobile }")
-            v-card.speech.d-flex.flex-column(tag="a" href="http://www.apcom2019.org/chao-an-lin.html" target="_blank")
-              v-card-title Chao-An Lin
-              v-card-subtitle Single and Multi-phase Simulations Using Artificial Compressibility Method on GPU Cluster
-              v-card-actions.align-self-end.mt-auto
-                v-icon mdi-map
-                v-col.caption 1F, 102
+            SpeechCard(
+              title=" Single and Multi-phase Simulations Using Artificial Compressibility Method on GPU Cluster"
+              speaker="Chao-An Lin"
+              location="1F, 102"
+              url="http://www.apcom2019.org/chao-an-lin.html"
+            )
           v-col(cols="12" sm="4" :class="{ 'pa-0': isMobile, 'py-0': !isMobile }")
-            v-card.speech.d-flex.flex-column(tag="a" href="http://www.apcom2019.org/fangsen-cui.html" target="_blank")
-              v-card-title Fangsen Cui
-              v-card-subtitle Ultrasonic Wave-based Structural Health Monitoring
-              v-card-actions.align-self-end.mt-auto
-                v-icon mdi-map
-                v-col.caption 1F, 101B
+            SpeechCard(
+              title=" Ultrasonic Wave-based Structural Health Monitoring"
+              speaker="Fangsen Cui"
+              location="1F, 101B"
+              url="http://www.apcom2019.org/fangsen-cui.html"
+            )
           v-col(cols="12" sm="4" :class="{ 'pa-0': isMobile, 'py-0': !isMobile }")
-            v-card.speech.d-flex.flex-column(tag="a" href="http://www.apcom2019.org/zhao-qin.html" target="_blank")
-              v-card-title Zhao Qin
-              v-card-subtitle Multiscale Computational Design of Materials: from nature to engineer
-              v-card-actions.align-self-end.mt-auto
-                v-icon mdi-map
-                v-col.caption 1F, 101C
+            SpeechCard(
+              title=" Multiscale Computational Design of Materials: from nature to engineer"
+              speaker="Zhao Qin"
+              location="1F, 101C"
+              url="http://www.apcom2019.org/zhao-qin.html"
+            )
     v-row
       v-col(cols="12" md="2" :class="{ 'pb-0': isMobile }")
         v-card.time(:color="timeCardColor")
           v-card-text.text-center 14:40-15:00
       v-col(cols="12" md="10" :class="{ 'pt-0': isMobile }")
-        v-card.event(:dark="!dark" :light="dark")
-          v-card-text.text-center Coffee Break
+        EventCard(title="Coffee Break")
     v-row
       v-col(cols="12" md="2" :class="{ 'pb-0': isMobile }")
         v-card.time(:color="timeCardColor")
@@ -141,8 +130,7 @@
         v-card.time(:color="timeCardColor")
           v-card-text.text-center 16:30-16:40
       v-col(cols="12" md="10" :class="{ 'pt-0': isMobile }")
-        v-card.event(:dark="!dark" :light="dark")
-          v-card-text.text-center Short Break
+        EventCard(title="Short Break")
     v-row
       v-col(cols="12" md="2" :class="{ 'pb-0': isMobile }")
         v-card.time(:color="timeCardColor")
@@ -160,6 +148,8 @@
 <script>
 import { mapState } from "vuex";
 
+import EventCard from "@/components/EventCard";
+import SpeechCard from "@/components/SpeechCard";
 import ParallelSession from "@/components/ParallelSession";
 
 export default {
@@ -181,6 +171,8 @@ export default {
     }
   },
   components: {
+    EventCard,
+    SpeechCard,
     ParallelSession
   }
 };

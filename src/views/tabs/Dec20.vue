@@ -5,48 +5,46 @@
         v-card.time(:color="timeCardColor")
           v-card-text.text-center 08:00-08:30
       v-col(cols="12" md="10" :class="{ 'pt-0': isMobile }")
-        v-card.event(:dark="!dark" :light="dark")
-          v-card-text.text-center Registration
+        EventCard(title="Registration")
     v-row
       v-col(cols="12" md="2" :class="{ 'pb-0': isMobile }")
         v-card.time(:color="timeCardColor")
           v-card-text.text-center 08:30-09:00
       v-col(cols="12" md="10" :class="{ 'pt-0': isMobile }")
-        v-card.speech.d-flex.flex-column(tag="a" href="http://www.apcom2019.org/jiun-shyan-chen.html" target="_blank")
-          v-card-title J.S. Chen
-          v-card-subtitle Manifold Learning Based Data-Driven Modeling for Biological Tissues
-          v-card-actions.align-self-end.mt-auto
-                v-icon mdi-map
-                v-col.caption 1F, 101
+        SpeechCard(
+          title="Manifold Learning Based Data-Driven Modeling for Biological Tissues"
+          speaker="J.S. Chen"
+          location="1F, 101"
+          url="http://www.apcom2019.org/jiun-shyan-chen.html"
+        )
     v-row
       v-col(cols="12" md="2" :class="{ 'pb-0': isMobile }")
         v-card.time(:color="timeCardColor")
           v-card-text.text-center 09:00-09:50
       v-col(cols="12" md="10" :class="{ 'pt-0': isMobile }")
-        v-card.speech.d-flex.flex-column(tag="a" href="http://www.apcom2019.org/yoon-young-kim.html" target="_blank")
-          v-card-title Yoon Young Kim
-          v-card-subtitle Advances in Beam-based Analysis Motivated by Efficient Design of Vehicle Body Structures
-          v-card-actions.align-self-end.mt-auto
-                v-icon mdi-map
-                v-col.caption 1F, 101
+        SpeechCard(
+          title="Advances in Beam-based Analysis Motivated by Efficient Design of Vehicle Body Structures"
+          speaker="Yoon Young Kim"
+          location="1F, 101"
+          url="http://www.apcom2019.org/yoon-young-kim.html"
+        )
     v-row
       v-col(cols="12" md="2" :class="{ 'pb-0': isMobile }")
         v-card.time(:color="timeCardColor")
           v-card-text.text-center 09:50-10:30
       v-col(cols="12" md="10" :class="{ 'pt-0': isMobile }")
-        v-card.speech.d-flex.flex-column(tag="a" href="http://www.apcom2019.org/qing-li.html" target="_blank")
-          v-card-title Qing Li
-          v-card-subtitle Time-dependent Structural Optimization for Biomedical Problems
-          v-card-actions.align-self-end.mt-auto
-                v-icon mdi-map
-                v-col.caption 1F, 101
+        SpeechCard(
+          title="Time-dependent Structural Optimization for Biomedical Problems"
+          speaker="Qing Li"
+          location="1F, 101"
+          url="http://www.apcom2019.org/qing-li.html"
+        )
     v-row
       v-col(cols="12" md="2" :class="{ 'pb-0': isMobile }")
         v-card.time(:color="timeCardColor")
           v-card-text.text-center 10:30-10:50
       v-col(cols="12" md="10" :class="{ 'pt-0': isMobile }")
-        v-card.event(:dark="!dark" :light="dark")
-          v-card-text.text-center Coffee Break
+        EventCard(title="Coffee Break")
     v-row
       v-col(cols="12" md="2" :class="{ 'pb-0': isMobile }")
         v-card.time(:color="timeCardColor")
@@ -58,17 +56,9 @@
         v-card.time(:color="timeCardColor")
           v-card-text.text-center 12:20-13:20
       v-col(cols="12" md="5" :class="{ 'py-0': isMobile }")
-        v-card.event.d-flex.flex-column(:dark="!dark" :light="dark")
-          v-card-text.text-center Lunch
-          v-card-actions.align-self-end.mt-auto
-            v-icon mdi-map
-            v-col.caption 3F, Banquet Hall
+        EventCard(title="Lunch" location="3F, Banquet Hall")
       v-col(cols="12" md="5" :class="{ 'py-0': isMobile }")
-        v-card.event.d-flex.flex-column(:dark="!dark" :light="dark")
-          v-card-text.text-center APACM GC meeting
-          v-card-actions.align-self-end.mt-auto
-            v-icon mdi-map
-            v-col.caption 3F, North Lounge
+        EventCard(title="APACM GC meeting" location="3F, North Lounge")
     v-row
       v-col(cols="12" md="2" :class="{ 'pb-0': isMobile }")
         v-card.time(:color="timeCardColor")
@@ -76,19 +66,19 @@
       v-col(cols="12" md="10" :class="{ 'pt-0': isMobile }")
         v-row(:class="{ 'px-3': isMobile }")
           v-col(cols="12" sm="6" :class="{ 'pa-0': isMobile, 'py-0': !isMobile }")
-            v-card.speech.d-flex.flex-column(tag="a" href="" target="_blank")
-              v-card-title Jeng-Tzong Chen
-              v-card-subtitle 
-              v-card-actions.align-self-end.mt-auto
-                v-icon mdi-map
-                v-col.caption 1F, 102
+            SpeechCard(
+              title=" "
+              speaker="Jeng-Tzong Chen"
+              location="1F, 102"
+              url="#"
+            )
           v-col(cols="12" sm="6" :class="{ 'pa-0': isMobile, 'py-0': !isMobile }")
-            v-card.speech.d-flex.flex-column(tag="a" href="" target="_blank")
-              v-card-title Andrew Chan
-              v-card-subtitle 
-              v-card-actions.align-self-end.mt-auto
-                v-icon mdi-map
-                v-col.caption 1F, 101C
+            SpeechCard(
+              title=" "
+              speaker="Andrew Chan"
+              location="1F, 101C"
+              url="#"
+            )
     v-row
       v-col(cols="12" md="2" :class="{ 'pb-0': isMobile }")
         v-card.time(:color="timeCardColor")
@@ -96,26 +86,25 @@
       v-col(cols="12" md="10" :class="{ 'pt-0': isMobile }")
         v-row(:class="{ 'px-3': isMobile }")
           v-col(cols="12" sm="6" :class="{ 'pa-0': isMobile, 'py-0': !isMobile }")
-            v-card.speech.d-flex.flex-column(tag="a" href="http://www.apcom2019.org/nasser-khalili.html" target="_blank")
-              v-card-title Nasser Khalili
-              v-card-subtitle A Fully Coupled Flow-Deformation Model for Dynamic Analysis of Unsaturated Soils Including Hydraulic and Mechanical Hystereses
-              v-card-actions.align-self-end.mt-auto
-                v-icon mdi-map
-                v-col.caption 1F, 102
+            SpeechCard(
+              title="A Fully Coupled Flow-Deformation Model for Dynamic Analysis of Unsaturated Soils Including Hydraulic and Mechanical Hystereses"
+              speaker="Nasser Khalili"
+              location="1F, 102"
+              url="http://www.apcom2019.org/nasser-khalili.html"
+            )
           v-col(cols="12" sm="6" :class="{ 'pa-0': isMobile, 'py-0': !isMobile }")
-            v-card.speech.d-flex.flex-column(tag="a" href="http://www.apcom2019.org/tae-hee-lee.html" target="_blank")
-              v-card-title Tae Hee Lee
-              v-card-subtitle Analysis and Optimization of a Piezoelectric Energy Harvester for Self-powered Wireless Sensor Systems
-              v-card-actions.align-self-end.mt-auto
-                v-icon mdi-map
-                v-col.caption 1F, 101C
+            SpeechCard(
+              title="Analysis and Optimization of a Piezoelectric Energy Harvester for Self-powered Wireless Sensor Systems"
+              speaker="Tae Hee Lee"
+              location="1F, 101C"
+              url="http://www.apcom2019.org/tae-hee-lee.html"
+            )
     v-row
       v-col(cols="12" md="2" :class="{ 'pb-0': isMobile }")
         v-card.time(:color="timeCardColor")
           v-card-text.text-center 14:40-15:00
       v-col(cols="12" md="10" :class="{ 'pt-0': isMobile }")
-        v-card.event(:dark="!dark" :light="dark")
-          v-card-text.text-center Coffee Break
+        EventCard(title="Coffee Break")
     v-row
       v-col(cols="12" md="2" :class="{ 'pb-0': isMobile }")
         v-card.time(:color="timeCardColor")
@@ -127,8 +116,7 @@
         v-card.time(:color="timeCardColor")
           v-card-text.text-center 16:30-16:40
       v-col(cols="12" md="10" :class="{ 'pt-0': isMobile }")
-        v-card.event(:dark="!dark" :light="dark")
-          v-card-text.text-center Short Break
+        EventCard(title="Short Break")
     v-row
       v-col(cols="12" md="2" :class="{ 'pb-0': isMobile }")
         v-card.time(:color="timeCardColor")
@@ -140,12 +128,13 @@
         v-card.time(:color="timeCardColor")
           v-card-text.text-center 18:10-21:00
       v-col(cols="12" md="10" :class="{ 'pt-0': isMobile }")
-        v-card.event(:dark="!dark" :light="dark")
-          v-card-text.text-center Banquet
+        EventCard(title="Banquet")
 </template>
 <script>
 import { mapState } from "vuex";
 
+import EventCard from "@/components/EventCard";
+import SpeechCard from "@/components/SpeechCard";
 import ParallelSession from "@/components/ParallelSession";
 
 export default {
@@ -167,6 +156,8 @@ export default {
     }
   },
   components: {
+    EventCard,
+    SpeechCard,
     ParallelSession
   }
 };

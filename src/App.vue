@@ -7,9 +7,9 @@
       v-btn(text href="http://www.apcom2019.org/uploads/8/0/5/1/80511818/ms_program_ver1_0.pdf" target="_blank")
         v-icon mdi-pdf-box
       v-btn-toggle(v-model="dark" rounded mandatory dense)
-        v-btn(:value="false" active-class="primary--text")
+        v-btn(:value="false" active-class="secondary")
           v-icon mdi-white-balance-sunny
-        v-btn(:value="true" active-class="primary--text")
+        v-btn(:value="true" active-class="dark")
           v-icon mdi-moon-waxing-crescent
     v-content
       router-view 
@@ -43,13 +43,13 @@ export default {
   }
 };
 </script>
-<style>
-* {
-  transition: 1s;
-}
-</style>
 <style lang="scss" scoped>
 a {
   text-decoration: none;
+}
+.dark {
+  border: solid 3px var(--v-primary-base);
+  box-shadow: 0px 0px 20px var(--v-primary-base) inset !important;
+  background: none;
 }
 </style>
