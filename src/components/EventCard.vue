@@ -24,7 +24,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 .dark {
-  border: solid 3px var(--v-primary-base);
+  // border: solid 3px var(--v-primary-base);
   box-shadow: 0px 0px 50px var(--v-primary-base) inset;
   background: none;
 }

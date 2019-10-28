@@ -27,7 +27,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 .dark {
-  border: solid 3px map-get($grey, "lighten-5");
+  //- border: solid 3px map-get($grey, "lighten-5");
   box-shadow: 0px 0px 50px map-get($grey, "lighten-5") inset;
   background: none;
 }

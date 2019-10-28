@@ -48,7 +48,7 @@ a {
   text-decoration: none;
 }
 .dark {
-  border: solid 3px var(--v-primary-base);
+  // border: solid 3px var(--v-primary-base);
   box-shadow: 0px 0px 20px var(--v-primary-base) inset !important;
   background: none;
 }
