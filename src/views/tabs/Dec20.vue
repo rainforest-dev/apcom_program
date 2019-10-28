@@ -12,25 +12,34 @@
         v-card.time(color="#e4e4e4")
           v-card-text.text-center 08:30-09:00
       v-col(cols="12" md="10" :class="{ 'pt-0': isMobile }")
-        v-card.speech(tag="a" href="http://www.apcom2019.org/jiun-shyan-chen.html" target="_blank")
+        v-card.speech.d-flex.flex-column(tag="a" href="http://www.apcom2019.org/jiun-shyan-chen.html" target="_blank")
           v-card-title J.S. Chen
           v-card-subtitle Manifold Learning Based Data-Driven Modeling for Biological Tissues
+          v-card-actions.align-self-end.mt-auto
+                v-icon mdi-map
+                v-col.caption 1F, 101
     v-row
       v-col(cols="12" md="2" :class="{ 'pb-0': isMobile }")
         v-card.time(color="#e4e4e4")
           v-card-text.text-center 09:00-09:50
       v-col(cols="12" md="10" :class="{ 'pt-0': isMobile }")
-        v-card.speech(tag="a" href="http://www.apcom2019.org/yoon-young-kim.html" target="_blank")
+        v-card.speech.d-flex.flex-column(tag="a" href="http://www.apcom2019.org/yoon-young-kim.html" target="_blank")
           v-card-title Yoon Young Kim
           v-card-subtitle Advances in Beam-based Analysis Motivated by Efficient Design of Vehicle Body Structures
+          v-card-actions.align-self-end.mt-auto
+                v-icon mdi-map
+                v-col.caption 1F, 101
     v-row
       v-col(cols="12" md="2" :class="{ 'pb-0': isMobile }")
         v-card.time(color="#e4e4e4")
           v-card-text.text-center 09:50-10:30
       v-col(cols="12" md="10" :class="{ 'pt-0': isMobile }")
-        v-card.speech(tag="a" href="http://www.apcom2019.org/qing-li.html" target="_blank")
+        v-card.speech.d-flex.flex-column(tag="a" href="http://www.apcom2019.org/qing-li.html" target="_blank")
           v-card-title Qing Li
           v-card-subtitle Time-dependent Structural Optimization for Biomedical Problems
+          v-card-actions.align-self-end.mt-auto
+                v-icon mdi-map
+                v-col.caption 1F, 101
     v-row
       v-col(cols="12" md="2" :class="{ 'pb-0': isMobile }")
         v-card.time(color="#e4e4e4")
@@ -48,9 +57,18 @@
       v-col(cols="12" md="2" :class="{ 'pb-0': isMobile }")
         v-card.time(color="#e4e4e4")
           v-card-text.text-center 12:20-13:20
-      v-col(cols="12" md="10" :class="{ 'pt-0': isMobile }")
-        v-card.event(dark)
+      v-col(cols="12" md="5" :class="{ 'py-0': isMobile }")
+        v-card.event.d-flex.flex-column(dark)
           v-card-text.text-center Lunch
+          v-card-actions.align-self-end.mt-auto
+            v-icon mdi-map
+            v-col.caption 3F, Banquet Hall
+      v-col(cols="12" md="5" :class="{ 'py-0': isMobile }")
+        v-card.event.d-flex.flex-column(dark)
+          v-card-text.text-center APACM GC meeting
+          v-card-actions.align-self-end.mt-auto
+            v-icon mdi-map
+            v-col.caption 3F, North Lounge
     v-row
       v-col(cols="12" md="2" :class="{ 'pb-0': isMobile }")
         v-card.time(color="#e4e4e4")
@@ -58,13 +76,19 @@
       v-col(cols="12" md="10" :class="{ 'pt-0': isMobile }")
         v-row(:class="{ 'px-3': isMobile }")
           v-col(cols="12" sm="6" :class="{ 'pa-0': isMobile, 'py-0': !isMobile }")
-            v-card.speech(tag="a" href="" target="_blank")
+            v-card.speech.d-flex.flex-column(tag="a" href="" target="_blank")
               v-card-title Jeng-Tzong Chen
               v-card-subtitle 
+              v-card-actions.align-self-end.mt-auto
+                v-icon mdi-map
+                v-col.caption 1F, 102
           v-col(cols="12" sm="6" :class="{ 'pa-0': isMobile, 'py-0': !isMobile }")
-            v-card.speech(tag="a" href="" target="_blank")
+            v-card.speech.d-flex.flex-column(tag="a" href="" target="_blank")
               v-card-title Andrew Chan
               v-card-subtitle 
+              v-card-actions.align-self-end.mt-auto
+                v-icon mdi-map
+                v-col.caption 1F, 101C
     v-row
       v-col(cols="12" md="2" :class="{ 'pb-0': isMobile }")
         v-card.time(color="#e4e4e4")
@@ -72,13 +96,19 @@
       v-col(cols="12" md="10" :class="{ 'pt-0': isMobile }")
         v-row(:class="{ 'px-3': isMobile }")
           v-col(cols="12" sm="6" :class="{ 'pa-0': isMobile, 'py-0': !isMobile }")
-            v-card.speech(tag="a" href="http://www.apcom2019.org/nasser-khalili.html" target="_blank")
+            v-card.speech.d-flex.flex-column(tag="a" href="http://www.apcom2019.org/nasser-khalili.html" target="_blank")
               v-card-title Nasser Khalili
               v-card-subtitle A Fully Coupled Flow-Deformation Model for Dynamic Analysis of Unsaturated Soils Including Hydraulic and Mechanical Hystereses
+              v-card-actions.align-self-end.mt-auto
+                v-icon mdi-map
+                v-col.caption 1F, 102
           v-col(cols="12" sm="6" :class="{ 'pa-0': isMobile, 'py-0': !isMobile }")
-            v-card.speech(tag="a" href="http://www.apcom2019.org/tae-hee-lee.html" target="_blank")
+            v-card.speech.d-flex.flex-column(tag="a" href="http://www.apcom2019.org/tae-hee-lee.html" target="_blank")
               v-card-title Tae Hee Lee
               v-card-subtitle Analysis and Optimization of a Piezoelectric Energy Harvester for Self-powered Wireless Sensor Systems
+              v-card-actions.align-self-end.mt-auto
+                v-icon mdi-map
+                v-col.caption 1F, 101C
     v-row
       v-col(cols="12" md="2" :class="{ 'pb-0': isMobile }")
         v-card.time(color="#e4e4e4")
