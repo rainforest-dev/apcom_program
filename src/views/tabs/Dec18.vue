@@ -1,8 +1,6 @@
 <template lang="pug">
   v-container
     v-row
-      v-col {{ wishlist }}
-    v-row
       v-col(cols="12" md="2" :class="{ 'pb-0': isMobile }")
         v-card.time(:color="timeCardColor")
           v-card-text.text-center 08:00-08:30

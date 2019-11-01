@@ -40,7 +40,6 @@ export default {
   },
   mounted() {
     this.loadParallelSessions(this.parallel_sessions_url);
-    console.log(this.$route.path.includes("map"));
   },
   methods: {
     ...mapActions({ loadParallelSessions: "loadParallelSessions" }),
