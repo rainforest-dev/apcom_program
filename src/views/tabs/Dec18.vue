@@ -1,6 +1,8 @@
 <template lang="pug">
   v-container
     v-row
+      v-col {{ wishlist }}
+    v-row
       v-col(cols="12" md="2" :class="{ 'pb-0': isMobile }")
         v-card.time(:color="timeCardColor")
           v-card-text.text-center 08:00-08:30
@@ -11,7 +13,7 @@
         v-card.time(:color="timeCardColor")
           v-card-text.text-center 08:30-09:00
       v-col(cols="12" md="10" :class="{ 'pt-0': isMobile }")
-        EventCard(title="Opening and Award Ceremony" location="1F, 101")
+        EventCard(title="Opening and Award Ceremony" location="101, 1F")
     v-row
       v-col(cols="12" md="2" :class="{ 'pb-0': isMobile }")
         v-card.time(:color="timeCardColor")
@@ -20,7 +22,7 @@
         SpeechCard(
           title="Multiscale Modeling - Structural Analysis - Experiments"
           speaker="Herbert Mang"
-          location="caption 1F, 101"
+          location="101, 1F"
           url="http://www.apcom2019.org/herbert-mang.html"
         )
     v-row
@@ -31,7 +33,7 @@
         SpeechCard(
           title="Mechanistic Machine Learning Methods for Mechanical Science and Design/Optimization of Lightweight Material Systems"
           speaker="Wing-Kam Liu"
-          location="caption 1F, 101"
+          location="101, 1F"
           url="http://www.apcom2019.org/wing-kam-liu.html"
         )
     v-row
@@ -51,7 +53,7 @@
         v-card.time(:color="timeCardColor")
           v-card-text.text-center 12:20-13:20
       v-col(cols="12" md="10" :class="{ 'pt-0': isMobile }")
-        EventCard(title="Lunch" location="3F, Banquet Hall")
+        EventCard(title="Lunch" location="Banquet Hall, 3F")
     v-row
       v-col(cols="12" md="2" :class="{ 'pb-0': isMobile }")
         v-card.time(:color="timeCardColor")
@@ -62,21 +64,21 @@
             SpeechCard(
               title="Immersed Boundary Methods: Finite Elements Redesigned"
               speaker="Ernst Rank"
-              location="1F, 102"
+              location="102, 1F"
               url="http://www.apcom2019.org/ernst-rank.html"
             )
           v-col(cols="12" sm="4" :class="{ 'pa-0': isMobile, 'py-0': !isMobile }")
             SpeechCard(
               title="Hybridizable Discontinuous Galerkin: low and high-order approximations for computationally-demanding problems"
               speaker="Antonio Huerta"
-              location="1F, 101B"
+              location="101B, 1F"
               url="http://www.apcom2019.org/antonio-huerta.html"
             )
           v-col(cols="12" sm="4" :class="{ 'pa-0': isMobile, 'py-0': !isMobile }")
             SpeechCard(
-              title="Fatigue Damage Prognosis of Orthotropic Steel Decks of a Cable-stayed Bridge under Moving Vehicles"
+              title="Multi-scale Fatigue Damage Prognosis of Orthotropic Steel Decks of a Cable-stayed Bridge under Moving Vehicles"
               speaker="You-Lin Xu"
-              location="1F, 101C"
+              location="101C, 1F"
               url="http://www.apcom2019.org/you-lin-xu.html"
             )
     v-row
@@ -89,21 +91,21 @@
             SpeechCard(
               title="Multi-GPU Accelerated Large-scale Phase-field Simulations for Dendritic Solidification"
               speaker="Tomohiro Takaki"
-              location="1F, 102"
+              location="102, 1F"
               url="http://www.apcom2019.org/tomohiro-takaki.html"
             )
           v-col(cols="12" sm="4" :class="{ 'pa-0': isMobile, 'py-0': !isMobile }")
             SpeechCard(
               title="Smoothed Finite Element Methods with High Order Strain Fields	"
               speaker="Gui-Rong Liu"
-              location="1F, 101B"
+              location="101B, 1F"
               url="http://www.apcom2019.org/gui-rong-liu.html"
             )
           v-col(cols="12" sm="4" :class="{ 'pa-0': isMobile, 'py-0': !isMobile }")
             SpeechCard(
               title="An Innovative Method for Integration of Simulation/Data/Learning in the Exascale/Post-Moore Era"
               speaker="Kengo Nakajima"
-              location="1F, 101C"
+              location="101C, 1F"
               url="http://www.apcom2019.org/kengo-nakajima.html"
             )
     v-row
@@ -141,12 +143,19 @@
 <script>
 import { mapState } from "vuex";
 
+import { db } from "@/store/db";
+
 import EventCard from "@/components/EventCard";
 import SpeechCard from "@/components/SpeechCard";
 import ParallelSession from "@/components/ParallelSession";
 
 export default {
   name: "dec_18",
+  data() {
+    return {
+      wishlist: []
+    };
+  },
   computed: {
     ...mapState({
       parallel_sessions: state => state.parallel_sessions.slice(0, 3),
@@ -162,6 +171,9 @@ export default {
         return this.$vuetify.breakpoint.smAndDown ? "#E0E0E0" : "#FAFAFA";
       }
     }
+  },
+  firestore: {
+    wishlist: db.collection("wishlist")
   },
   components: {
     EventCard,

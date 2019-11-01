@@ -14,7 +14,7 @@
         SpeechCard(
           title="Manifold Learning Based Data-Driven Modeling for Biological Tissues"
           speaker="J.S. Chen"
-          location="1F, 101"
+          location="101, 1F"
           url="http://www.apcom2019.org/jiun-shyan-chen.html"
         )
     v-row
@@ -25,7 +25,7 @@
         SpeechCard(
           title="Advances in Beam-based Analysis Motivated by Efficient Design of Vehicle Body Structures"
           speaker="Yoon Young Kim"
-          location="1F, 101"
+          location="101, 1F"
           url="http://www.apcom2019.org/yoon-young-kim.html"
         )
     v-row
@@ -36,7 +36,7 @@
         SpeechCard(
           title="Time-dependent Structural Optimization for Biomedical Problems"
           speaker="Qing Li"
-          location="1F, 101"
+          location="101, 1F"
           url="http://www.apcom2019.org/qing-li.html"
         )
     v-row
@@ -56,9 +56,9 @@
         v-card.time(:color="timeCardColor")
           v-card-text.text-center 12:20-13:20
       v-col(cols="12" md="5" :class="{ 'py-0': isMobile }")
-        EventCard(title="Lunch" location="3F, Banquet Hall")
+        EventCard(title="Lunch" location="Banquet Hall, 3F")
       v-col(cols="12" md="5" :class="{ 'py-0': isMobile }")
-        EventCard(title="APACM GC meeting" location="3F, North Lounge")
+        EventCard(title="APACM GC meeting" location="North Lounge, 3F")
     v-row
       v-col(cols="12" md="2" :class="{ 'pb-0': isMobile }")
         v-card.time(:color="timeCardColor")
@@ -69,14 +69,14 @@
             SpeechCard(
               title=" "
               speaker="Jeng-Tzong Chen"
-              location="1F, 102"
+              location="102, 1F"
               url="#"
             )
           v-col(cols="12" sm="6" :class="{ 'pa-0': isMobile, 'py-0': !isMobile }")
             SpeechCard(
               title=" "
               speaker="Andrew Chan"
-              location="1F, 101C"
+              location="101C, 1F"
               url="#"
             )
     v-row
@@ -89,14 +89,14 @@
             SpeechCard(
               title="A Fully Coupled Flow-Deformation Model for Dynamic Analysis of Unsaturated Soils Including Hydraulic and Mechanical Hystereses"
               speaker="Nasser Khalili"
-              location="1F, 102"
+              location="102, 1F"
               url="http://www.apcom2019.org/nasser-khalili.html"
             )
           v-col(cols="12" sm="6" :class="{ 'pa-0': isMobile, 'py-0': !isMobile }")
             SpeechCard(
               title="Analysis and Optimization of a Piezoelectric Energy Harvester for Self-powered Wireless Sensor Systems"
               speaker="Tae Hee Lee"
-              location="1F, 101C"
+              location="101C, 1F"
               url="http://www.apcom2019.org/tae-hee-lee.html"
             )
     v-row

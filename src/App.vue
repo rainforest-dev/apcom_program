@@ -4,6 +4,8 @@
       a(href="http://www.apcom2019.org")
         v-toolbar-title.headline.text-uppercase.font-weight-bold.primary--text APCOM 2019
       v-spacer
+      v-btn(text :to="$route.path.includes('map') ? '/program' : '/map'")
+        v-icon {{ $route.path.includes('map') ? 'mdi-home' : 'mdi-map' }}
       v-btn(text href="http://www.apcom2019.org/uploads/8/0/5/1/80511818/ms_program_ver1_0.pdf" target="_blank")
         v-icon mdi-pdf-box
       v-btn-toggle(v-model="dark" rounded mandatory dense)
@@ -12,7 +14,8 @@
         v-btn(:value="true" active-class="dark")
           v-icon mdi-moon-waxing-crescent
     v-content
-      router-view 
+      transition(name="slide-fade" mode="out-in")
+        router-view
 </template>
 
 <script>
@@ -22,7 +25,8 @@ export default {
   name: "App",
   data: () => ({
     parallel_sessions_url:
-      "https://docs.google.com/spreadsheets/d/e/2PACX-1vT85LWZ9Cx9hM9XYyL_j1ncLr0scmbqaIakLTcecn8HF9Kad1mCpF_3jqo7iwl4dmejLACm9lArugcm/pub?gid=328538989&single=true&output=csv"
+      "https://docs.google.com/spreadsheets/d/e/2PACX-1vT85LWZ9Cx9hM9XYyL_j1ncLr0scmbqaIakLTcecn8HF9Kad1mCpF_3jqo7iwl4dmejLACm9lArugcm/pub?gid=328538989&single=true&output=csv",
+    map: true
   }),
   computed: {
     dark: {
@@ -36,6 +40,7 @@ export default {
   },
   mounted() {
     this.loadParallelSessions(this.parallel_sessions_url);
+    console.log(this.$route.path.includes("map"));
   },
   methods: {
     ...mapActions({ loadParallelSessions: "loadParallelSessions" }),

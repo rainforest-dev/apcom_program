@@ -5,7 +5,7 @@
         v-btn(v-for="date in dates" :to="'/program/'+date" :active-class="dark ? 'dark' : 'secondary'") Dec {{ date }}
       transition(name="slide-fade" mode="out-in")
         router-view
-      v-bottom-navigation(v-if="isMobile" app horizontal hide-on-scroll scroll-threshold=0)
+      v-bottom-navigation(v-if="isMobile" app horizontal scroll-threshold=0)
         v-btn(v-for="date in dates" :to="'/program/'+date" :width="100/dates.length+'%'" :active-class="dark ? 'dark' : 'secondary'") {{ date }}
 </template>
 <script>
@@ -32,5 +32,10 @@ export default {
   // border: solid 3px var(--v-primary-base);
   box-shadow: 0px 0px 30px var(--v-primary-base) inset !important;
   background: none;
+}
+.map {
+  position: fixed;
+  right: 0;
+  bottom: 0;
 }
 </style>

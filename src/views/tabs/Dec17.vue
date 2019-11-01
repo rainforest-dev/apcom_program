@@ -75,7 +75,7 @@
         v-card.time(:color="timeCardColor")
           v-card-text.text-center 15:00-16:30
       v-col(cols="12" md="10" :class="{ 'pt-0': isMobile }")
-        EventCard(title="APACM EC meeting" location="4F, Elegance Lounge")
+        EventCard(title="APACM EC meeting" location="Elegance Lounge, 4F")
     v-row
       v-col(cols="12" md="2" :class="{ 'pb-0': isMobile }")
         v-card.time(:color="timeCardColor")
@@ -97,7 +97,7 @@
       v-col(cols="12" md="10" :class="{ 'pt-0': isMobile }")
         EventCard(
           title="Welcome Reception</br><span class='warning--text text--darken-2'>Registration(17:30-18:30)</span>" 
-          location="4F, V.I.P. Room, TICC"
+          location="V.I.P. Room, 4F, TICC"
         )
 </template>
 <script>

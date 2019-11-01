@@ -1,6 +1,6 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Program from "../views/Program.vue";
+import Program from "../views/Program";
 
 import Dec17 from "../views/tabs/Dec17";
 import Dec18 from "../views/tabs/Dec18";
@@ -39,6 +39,11 @@ const routes = [
         component: Dec20
       }
     ]
+  },
+  {
+    name: "map",
+    path: "/map",
+    component: () => import("../views/Map")
   }
 ];
 

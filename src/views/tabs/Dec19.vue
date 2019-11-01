@@ -14,7 +14,7 @@
         SpeechCard(
           title=" On the Mechanics of 2D Alloy Sheets : Application to Transition Metal Dichalcogenides"
           speaker="David J. Srolovitz"
-          location="1F, 101"
+          location="101, 1F"
           url="http://www.apcom2019.org/tayfun-tezduyar.html"
         )
     v-row
@@ -25,7 +25,7 @@
         SpeechCard(
           title=" Space-Time Computational Analysis: From Inception to New Generations"
           speaker="Tayfun Tezduyar"
-          location="1F, 101"
+          location="101, 1F"
           url="http://www.apcom2019.org/tayfun-tezduyar.html"
         )
     v-row
@@ -36,7 +36,7 @@
         SpeechCard(
           title=" "
           speaker="Hiroshi Okuda"
-          location="1F, 101"
+          location="101, 1F"
           url="#"
         )
     v-row
@@ -56,9 +56,9 @@
         v-card.time(:color="timeCardColor")
           v-card-text.text-center 12:20-13:20
       v-col(cols="12" md="5" :class="{ 'py-0': isMobile }")
-        EventCard(title="Lunch" location="3F, Banquet Hall")
+        EventCard(title="Lunch" location="Banquet Hall, 3F")
       v-col(cols="12" md="5" :class="{ 'py-0': isMobile }")
-        EventCard(title="JACM Meeting" location="3F, North Lounge")
+        EventCard(title="JACM Meeting" location="North Lounge, 3F")
     v-row
       v-col(cols="12" md="2" :class="{ 'pb-0': isMobile }")
         v-card.time(:color="timeCardColor")
@@ -69,21 +69,21 @@
             SpeechCard(
               title=" "
               speaker="Wolfgang Wall"
-              location="1F, 102"
+              location="102, 1F"
               url="#"
             )
           v-col(cols="12" sm="4" :class="{ 'pa-0': isMobile, 'py-0': !isMobile }")
             SpeechCard(
               title=" Design and Analysis of Photo-responsive polymers: scale bridging between CG MD and shell FE"
               speaker="Maenghyo Cho"
-              location="1F, 101B"
+              location="101B, 1F"
               url="http://www.apcom2019.org/maenghyo-cho.html"
             )
           v-col(cols="12" sm="4" :class="{ 'pa-0': isMobile, 'py-0': !isMobile }")
             SpeechCard(
               title=" Modeling Musculoskeletal Mechanobiology"
               speaker="Sandra Shefelbine"
-              location="1F, 101C"
+              location="101C, 1F"
               url="http://www.apcom2019.org/sandra-shefelbine.html"
             )
     v-row
@@ -96,21 +96,21 @@
             SpeechCard(
               title=" Single and Multi-phase Simulations Using Artificial Compressibility Method on GPU Cluster"
               speaker="Chao-An Lin"
-              location="1F, 102"
+              location="102, 1F"
               url="http://www.apcom2019.org/chao-an-lin.html"
             )
           v-col(cols="12" sm="4" :class="{ 'pa-0': isMobile, 'py-0': !isMobile }")
             SpeechCard(
               title=" Ultrasonic Wave-based Structural Health Monitoring"
               speaker="Fangsen Cui"
-              location="1F, 101B"
+              location="101B, 1F"
               url="http://www.apcom2019.org/fangsen-cui.html"
             )
           v-col(cols="12" sm="4" :class="{ 'pa-0': isMobile, 'py-0': !isMobile }")
             SpeechCard(
               title=" Multiscale Computational Design of Materials: from nature to engineer"
               speaker="Zhao Qin"
-              location="1F, 101C"
+              location="101C, 1F"
               url="http://www.apcom2019.org/zhao-qin.html"
             )
     v-row

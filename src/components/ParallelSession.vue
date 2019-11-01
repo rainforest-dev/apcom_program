@@ -9,7 +9,7 @@
         v-card-title {{ ms[1] }}
         v-card-actions.align-self-end.mt-auto
           v-icon mdi-map
-          v-col.caption {{ ms[6] }}, {{ ms[5] }}
+          v-col.caption {{ ms[5] }}, {{ ms[6] }}
 
     v-col.pt-0(v-if="isMobile")
       v-expansion-panels
@@ -23,7 +23,7 @@
                   v-card-title {{ ms[1] }}
                   v-card-actions.align-self-end.mt-auto
                     v-icon mdi-map
-                    v-col.caption {{ ms[6] }}, {{ ms[5] }}
+                    v-col.caption {{ ms[5] }}, {{ ms[6] }}
 </template>
 <script>
 export default {
