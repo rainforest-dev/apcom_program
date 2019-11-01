@@ -70,7 +70,7 @@
               title=" "
               speaker="Jeng-Tzong Chen"
               location="102, 1F"
-              url="#"
+              url="http://www.apcom2019.org/jeng-tzong-chen.html"
             )
           v-col(cols="12" sm="6" :class="{ 'pa-0': isMobile, 'py-0': !isMobile }")
             SpeechCard(

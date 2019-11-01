@@ -15,7 +15,7 @@
           title=" On the Mechanics of 2D Alloy Sheets : Application to Transition Metal Dichalcogenides"
           speaker="David J. Srolovitz"
           location="101, 1F"
-          url="http://www.apcom2019.org/tayfun-tezduyar.html"
+          url="#"
         )
     v-row
       v-col(cols="12" md="2" :class="{ 'pb-0': isMobile }")
