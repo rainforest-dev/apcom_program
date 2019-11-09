@@ -126,9 +126,9 @@
     v-row
       v-col(cols="12" md="2" :class="{ 'pb-0': isMobile }")
         v-card.time(:color="timeCardColor")
-          v-card-text.text-center 18:10-21:00
+          v-card-text.text-center 18:40-21:00
       v-col(cols="12" md="10" :class="{ 'pt-0': isMobile }")
-        EventCard(title="Banquet")
+        EventCard(title="Banquet" location="Grand Ballroom, 5F, Humble House")
 </template>
 <script>
 import { mapState } from "vuex";

@@ -34,10 +34,10 @@
           v-card-text.text-center 09:50-10:30
       v-col(cols="12" md="10" :class="{ 'pt-0': isMobile }")
         SpeechCard(
-          title=" "
+          title="Role of High Performance Open CAE Applications in Structural Design and Production​"
           speaker="Hiroshi Okuda"
           location="101, 1F"
-          url="#"
+          url="http://www.apcom2019.org/hirohi-okuda.html"
         )
     v-row
       v-col(cols="12" md="2" :class="{ 'pb-0': isMobile }")
@@ -55,10 +55,12 @@
       v-col(cols="12" md="2" :class="{ 'pb-0': isMobile }")
         v-card.time(:color="timeCardColor")
           v-card-text.text-center 12:20-13:20
-      v-col(cols="12" md="5" :class="{ 'py-0': isMobile }")
+      v-col(cols="12" md="3" :class="{ 'py-0': isMobile }")
         EventCard(title="Lunch" location="Banquet Hall, 3F")
-      v-col(cols="12" md="5" :class="{ 'py-0': isMobile }")
-        EventCard(title="JACM Meeting" location="North Lounge, 3F")
+      v-col(cols="12" md="4" :class="{ 'py-0': isMobile }")
+        EventCard(title="ACMT Meeting" location="North Lounge, 3F")
+      v-col(cols="12" md="3" :class="{ 'py-0': isMobile }")
+        EventCard(title="JACM Meeting" location="South Lounge, 3F")
     v-row
       v-col(cols="12" md="2" :class="{ 'pb-0': isMobile }")
         v-card.time(:color="timeCardColor")

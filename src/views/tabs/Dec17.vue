@@ -93,10 +93,10 @@
     v-row
       v-col(cols="12" md="2" :class="{ 'pb-0': isMobile }")
         v-card.time(:color="timeCardColor")
-          v-card-text.text-center 18:00-20:00
+          v-card-text.text-center 18:00-20:30
       v-col(cols="12" md="10" :class="{ 'pt-0': isMobile }")
         EventCard(
-          title="Welcome Reception</br><span class='warning--text text--darken-2'>Registration(17:30-18:30)</span>" 
+          title="Welcome Reception</br><span class='warning--text text--darken-2'>Registration(17:00-20:30)</span>" 
           location="V.I.P. Room, 4F, TICC"
         )
 </template>
