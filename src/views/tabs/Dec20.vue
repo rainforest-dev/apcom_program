@@ -128,7 +128,7 @@
         v-card.time(:color="timeCardColor")
           v-card-text.text-center 18:40-21:00
       v-col(cols="12" md="10" :class="{ 'pt-0': isMobile }")
-        EventCard(title="Banquet" location="Grand Ballroom, 5F, Humble House")
+        EventCard(title="Banquet</br><span class='warning--text text--darken-2'>6:40 Open Access</span>" location="Grand Ballroom, 5F, Humble House")
 </template>
 <script>
 import { mapState } from "vuex";
