@@ -18,7 +18,7 @@
           v-card-text.text-center 09:00-09:50
       v-col(cols="12" md="10" :class="{ 'pt-0': isMobile }")
         SpeechCard(
-          title="Multiscale Modeling - Structural Analysis - Experiments"
+          title="Multiscale Modeling - Structural Analysis - Experiments Cornerstones of the Joint Austro-Chinese Research Project Bridging the Gap"
           speaker="Herbert Mang"
           location="101, 1F"
           url="http://www.apcom2019.org/herbert-mang.html"

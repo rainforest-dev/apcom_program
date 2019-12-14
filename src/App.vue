@@ -6,7 +6,7 @@
       v-spacer
       v-btn(text :to="$route.path.includes('map') ? '/program' : '/map'")
         v-icon {{ $route.path.includes('map') ? 'mdi-home' : 'mdi-map' }}
-      v-btn(text href="http://www.apcom2019.org/uploads/8/0/5/1/80511818/ms_program_ver1_0.pdf" target="_blank")
+      v-btn(text href="http://www.apcom2019.org/uploads/8/0/5/1/80511818/final.pdf" target="_blank")
         v-icon mdi-pdf-box
       v-btn-toggle(v-model="dark" rounded mandatory dense)
         v-btn(:value="false" active-class="secondary")

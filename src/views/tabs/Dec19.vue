@@ -15,7 +15,7 @@
           title=" On the Mechanics of 2D Alloy Sheets : Application to Transition Metal Dichalcogenides"
           speaker="David J. Srolovitz"
           location="101, 1F"
-          url="#"
+          url="http://www.apcom2019.org/david-srolovitz.html"
         )
     v-row
       v-col(cols="12" md="2" :class="{ 'pb-0': isMobile }")
@@ -69,7 +69,7 @@
         v-row(:class="{ 'px-3': isMobile }")
           v-col(cols="12" sm="4" :class="{ 'pa-0': isMobile, 'py-0': !isMobile }")
             SpeechCard(
-              title=" "
+              title="Advanced Methods for Turbulent Flows and Fluid-Structure(-Contact) Interaction"
               speaker="Wolfgang Wall"
               location="102, 1F"
               url="#"
