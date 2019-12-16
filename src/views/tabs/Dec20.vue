@@ -74,10 +74,10 @@
             )
           v-col(cols="12" sm="6" :class="{ 'pa-0': isMobile, 'py-0': !isMobile }")
             SpeechCard(
-              title=" "
+              title="Numerical Analysis of Fracture and Breakage of Brittle Material Using Combined Continua and Discontinua Method"
               speaker="Andrew Chan"
               location="101C, 1F"
-              url="#"
+              url="http://www.apcom2019.org/andrew-chan.html"
             )
     v-row
       v-col(cols="12" md="2" :class="{ 'pb-0': isMobile }")

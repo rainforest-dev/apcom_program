@@ -72,7 +72,7 @@
               title="Advanced Methods for Turbulent Flows and Fluid-Structure(-Contact) Interaction"
               speaker="Wolfgang Wall"
               location="102, 1F"
-              url="#"
+              url="http://www.apcom2019.org/wolfgang-wall.html"
             )
           v-col(cols="12" sm="4" :class="{ 'pa-0': isMobile, 'py-0': !isMobile }")
             SpeechCard(
